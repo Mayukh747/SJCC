@@ -29,7 +29,15 @@ def problem_1(balance, annualInterestRate, monthlyPaymentRate):
         #       str(balance))
     print("Remaining balance: " + str(balance))
 
-def problem_2()
+
+#Has anyone solved with binary search?
+# def problem_2(balance, annualInterestRate):
+    # lowest_payment = 10
+    # canPay = False
+    # while not canPay:
+    #     for n in rang
+
+
 
 
 
