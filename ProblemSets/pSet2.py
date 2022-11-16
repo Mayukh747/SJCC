@@ -31,11 +31,54 @@ def problem_1(balance, annualInterestRate, monthlyPaymentRate):
 
 
 #Has anyone solved with binary search?
-# def problem_2(balance, annualInterestRate):
-    # lowest_payment = 10
-    # canPay = False
-    # while not canPay:
-    #     for n in rang
+def problem_2(balance, annualInterestRate):
+    #retain the original balance
+    original_balance = balance
+    #calculate monthly interest
+    monthlyInterestRate = annualInterestRate/12
+    #current monthly payment
+    monthlyPayment = 0
+
+    while balance >= 0:
+        #reset the value
+        balance = original_balance
+
+        #test the new monthlyPaymentValue -->
+        # if balance is greater than zero we didn't find the right minimum
+        for month in range(1,13):
+            unpaidBalance = balance - monthlyPayment
+            interest = unpaidBalance + interest
+            balance = unpaidBalance  + interest
+    print("lowest payment", monthlyPayment)
+
+def problem_3(balance, annualInterestRate):
+    monthlyInterestRate = annualInterestRate/12
+    #lower bound being we pay the most possible every month
+    lowerBound = balance/12
+    #upper bound being we pay the least possible every month?
+    upperBound = (balance* (1+monthlyInterestRate)**12)/12
+    originalBalance = balance
+
+    while True:
+        if abs(balance) <= 0.01: #just < ok?
+            break
+        balance = originalBalance
+        monthlyPayment = (lowerBound + upperBound)/2
+        for month in range(1,13):
+            unpaidBalance = balance - monthlyPayment
+            interest = unpaidBalance * monthlyInterestRate
+            balance  = unpaidBalance + interest
+
+            if balance > 0:
+                lowerBound = monthlyPayment
+            elif balance < 0:
+                upperBound = monthlyPayment
+            elif balance == 0:
+                break
+    print("Lowest payment: ", round(monthlyPayment,2))
+
+
+
 
 
 
