@@ -1,0 +1,7 @@
+0,NameError,name 'burritos' is not defined,0,,2023-11-17 11:53:01.722241
+1,RuntimeError,Malformed test file: does not define the global variable 'OK_FORMAT',0,,2023-11-17 13:37:18.468917
+2,RuntimeError,Malformed test file: does not define the global variable 'OK_FORMAT',0,,2023-11-17 13:37:35.304811
+3,RuntimeError,Malformed test file: does not define the global variable 'OK_FORMAT',0,,2023-11-17 14:12:11.921128
+4,ValueError,"('Menu_Item', 'Overall average') is not a label or index",0,,2023-11-17 14:14:40.736949
+5,TypeError,'<' not supported between instances of 'str' and 'int',0,,2023-11-17 14:15:54.367559
+6,AttributeError,'Table' object has no attribute 'shape',0,,2023-11-17 14:16:19.654963
